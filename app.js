@@ -20,13 +20,9 @@
 
     function render() {
         let tasks_html = tasks.map(function(value, index) {
-            let additionalClass;
-
-            (value.status) ? additionalClass = "crossed" : false;
-
             return `
                 <div class="js_todo_item row" data-index="${index}">
-                    <div class="c5 js_item_text ${additionalClass}" data-action="name">${value.name}</div>
+                    <div class="c5 js_item_text ${value.status ? additionalClass = "crossed" : false}" data-action="name">${value.name}</div>
                     <div class="c2 js_item_action">
                         <button type="button" data-action="edit" title="Edit">!</button>
                         <button type="button" data-action="remove" title="Remove">X</button>
