@@ -18,10 +18,6 @@
             flex: 5;
         }
 
-        .c2 {
-            flex: 2;
-        }
-
         .todo-wrap {
             max-width: 500px;
             margin: 0 auto;
@@ -30,39 +26,18 @@
         .todo-wrap h1 {
             text-align: center;
         }
-
-        .crossed {
-            text-decoration: line-through;
-        }
     </style>
-
+    <div id="counter">( 0 )</div>
     <div id="app">
         <div class=" todo-wrap">
             <h1>TODO</h1>
 
-            <div class="js_todo_list todo-list">
-                <div class="js_todo_item row">
-                    <div class="c5 js_item_text">TEST text</div>
-                    <div class="c2 js_item_action">
-                        <button type="button" title="Edit">!</button>
-                        <button type="button" title="Remove">X</button>
-                    </div>
-                </div>
-            </div>
+            <div class="js_users_list">
 
-            <div class="row">
-                <div class="c5">
-                    <input type="text" class="js_add_input">                   
-                </div>
-                <div class="c2">
-                    <button type="button" class="js_add" data-action="add" title="Add">+</button>
-                    <button type="button" class="js_save" style="display: none;" data-action="save">Save</button>
-                    <button type="button" class="js_cancel" style="display: none;" data-action="cancel">Cancel</button>
-                </div>
             </div>
         </div>
         
     </div>
-    <script src="./app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
