@@ -32,12 +32,15 @@
         <div class=" todo-wrap">
             <h1>TODO</h1>
 
-            <div class="js_users_list">
+            <ul class="js_users_list">
 
-            </div>
+            </ul>
         </div>
         
     </div>
+    <script id="users_list_template" type="text/template">
+        <li><strong>Name: </strong>${data.name} <strong>Phone: </strong>${data.phone}</li>
+    </script>
     <script src="app.js"></script>
 </body>
 </html>
