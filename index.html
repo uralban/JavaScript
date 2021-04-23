@@ -8,38 +8,49 @@
 </head>
 <body>
     <style>
-
-        .row {
-            display: flex;
-            margin-bottom: 20px;
+        .main-section {
+            width: 55%;
+            padding: 20px;
         }
-
-        .c5 {
-            flex: 5;
+        .aside {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 35%;
+            padding: 40px 20px;
         }
-
-        .todo-wrap {
-            max-width: 500px;
-            margin: 0 auto;
+        .aside h3, .aside p {
+            margin: 10px 0 0;
         }
-
-        .todo-wrap h1 {
-            text-align: center;
-        }
+        .add-button {
+            margin-left: 20px;
+            padding: 10px 20px;
+        }        
     </style>
-    <div id="counter">( 0 )</div>
     <div id="app">
-        <div class=" todo-wrap">
-            <h1>TODO</h1>
-
-            <ul class="js_users_list">
-
-            </ul>
+        <div class="main-section">
+            <h1>Products</h1>
+            <div class="products-list"></div>
         </div>
-        
+        <aside class="aside">
+            <h2>Cart</h2>
+            <div class="cart-list"></div>
+        </aside>
     </div>
-    <script id="users_list_template" type="text/template">
-        <li><strong>Name: </strong>${data.name} <strong>Phone: </strong>${data.phone}</li>
+    <script id="products-template" type="text/template">
+        <div class="product-section" data-index="${index}">
+            <h3>${data.name}</h3>
+            <p>Price: ${data.price}</p>
+            <p>Available: ${data.available} <button type="button" class="add-button" data-action="add" ${data.disabled == true ? "disabled='disabled'" : ''}>Add to cart</button></p>            
+        </div>
+        <hr>
+    </script>
+    <script id="cart-template" type="text/template">
+        <div class="cart-section">
+            <p><strong>${data.name}</strong> - Price: ${data.price * data.quantity}</p>
+            <p>Quantity: ${data.quantity} <button type="button" class="" data-action="remove_one" title="Remove one">-</button><button type="button" class="" data-action="add_one" title="Add one" ${data.disabled == true ? "disabled='disabled'" : ''}>+</button></p>            
+        </div>
+        <hr>
     </script>
     <script src="app.js"></script>
 </body>

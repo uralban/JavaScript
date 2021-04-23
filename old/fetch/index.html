@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        .row {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .c5 {
+            flex: 5;
+        }
+
+        .todo-wrap {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .todo-wrap h1 {
+            text-align: center;
+        }
+    </style>
+    <div id="counter">( 0 )</div>
+    <div id="app">
+        <div class=" todo-wrap">
+            <h1>TODO</h1>
+
+            <ul class="js_users_list">
+
+            </ul>
+        </div>
+        
+    </div>
+    <script id="users_list_template" type="text/template">
+        <li><strong>Name: </strong>${data.name} <strong>Phone: </strong>${data.phone}</li>
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
